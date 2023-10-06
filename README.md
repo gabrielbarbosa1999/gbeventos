@@ -8,12 +8,6 @@ O sistema permite o gerenciamento das atividades do evento, incluindo palestras,
 
 Além disso, o sistema possibilita o cadastro de participantes, onde cada participante é registrado com seu nome e email.
 
-## Funcionalidades
-
-- Cadastro de Atividades: Permite a criação de atividades do evento com nome, descrição e preço.
-- Agendamento de Blocos de Horários: Permite a divisão das atividades em blocos de horários com data, hora de início e fim.
-- Cadastro de Participantes: Permite registrar os participantes com nome e email.
-
 ## Pré-requisitos
 
 Antes de executar o projeto, certifique-se de ter as seguintes ferramentas instaladas:
