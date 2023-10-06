@@ -6,24 +6,24 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "tb_categoria")
-public class Categoria {
+@Table(name = "tb_participante")
+public class Participante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(columnDefinition = "TEXT")
-    private String descricao;
-    @OneToMany(mappedBy = "categoria")
+    private String nome;
+    private String email;
+    @ManyToMany(mappedBy = "participantes")
     private Set<Atividade> atividades = new HashSet<>();
 
-
-    public Categoria() {
+    public Participante() {
     }
 
-    public Categoria(Integer id, String descricao, Atividade atividade) {
+    public Participante(Integer id, String nome, String email, Atividade atividade) {
         this.id = id;
-        this.descricao = descricao;
+        this.nome = nome;
+        this.email = email;
         this.atividades.add(atividade);
     }
 

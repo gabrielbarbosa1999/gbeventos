@@ -19,5 +19,15 @@ public class Bloco {
     private Instant fim;
     @OneToMany(mappedBy = "bloco")
     private Set<Atividade> atividades = new HashSet<>();
-    
+
+    public Bloco() {
+    }
+
+    public Bloco(Integer id, Instant incio, Instant fim, Atividade atividade) {
+        this.id = id;
+        this.incio = incio;
+        this.fim = fim;
+        this.atividades.add(atividade);
+    }
+
 }
