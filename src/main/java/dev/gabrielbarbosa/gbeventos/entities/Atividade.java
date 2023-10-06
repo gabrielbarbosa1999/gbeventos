@@ -16,5 +16,8 @@ public class Atividade {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+    @ManyToOne
+    @JoinColumn(name = "bloco_id")
+    private Bloco bloco;
 
 }
