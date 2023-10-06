@@ -1,4 +1,4 @@
-# GBEVentos - Sistema de Gerenciamento de Participantes
+# GBEventos - Sistema de Gerenciamento de Participantes
 
 Este é um projeto desenvolvido em Spring Boot com Java e banco de dados H2 para gerenciar informações dos participantes das atividades de um evento acadêmico. Este desafio faz parte do curso Java Spring da DevSuperior e é necessário para conquistar o certificado do curso.
 
@@ -49,4 +49,4 @@ O banco de dados é preenchido automaticamente com dados iniciais com base no di
 ## Autor
 
 - Gabriel Barbosa de Oliveira
-- Contato: seu@email.com
+- Contato: gabrielbarbosaoliveira1999@gmail.com
