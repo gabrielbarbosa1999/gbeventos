@@ -14,18 +14,18 @@ public class Bloco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private Instant incio;
+    private Instant inicio;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant fim;
-    @OneToMany(mappedBy = "bloco")
+    @ManyToMany(mappedBy = "blocos")
     private Set<Atividade> atividades = new HashSet<>();
 
     public Bloco() {
     }
 
-    public Bloco(Integer id, Instant incio, Instant fim, Atividade atividade) {
+    public Bloco(Integer id, Instant inicio, Instant fim, Atividade atividade) {
         this.id = id;
-        this.incio = incio;
+        this.inicio = inicio;
         this.fim = fim;
         this.atividades.add(atividade);
     }

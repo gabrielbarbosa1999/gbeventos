@@ -19,11 +19,13 @@ public class Atividade {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
-    @ManyToOne
-    @JoinColumn(name = "bloco_id")
-    private Bloco bloco;
     @ManyToMany
-    @JoinTable(name = "tb_participante_atividade",
+    @JoinTable(name = "tb_atividade_bloco",
+            joinColumns = @JoinColumn(name = "atividade_id"),
+            inverseJoinColumns = @JoinColumn(name = "bloco_id"))
+    private Set<Bloco> blocos = new HashSet<>();
+    @ManyToMany
+    @JoinTable(name = "tb_atividade_participante",
             joinColumns = @JoinColumn(name = "atividade_id"),
             inverseJoinColumns = @JoinColumn(name = "participante_id"))
     private Set<Participante> participantes = new HashSet<>();
